@@ -16,6 +16,7 @@ type PrinterModel = {
 type PrinterCategory = {
     id: string;
     title: string;
+    image: string;
     icon: any;
     printers: PrinterModel[];
 };
@@ -24,6 +25,7 @@ const printerCategories: PrinterCategory[] = [
     {
         id: "production",
         title: "Printing Services",
+        image: "/images/category-printing.jpg",
         icon: Printer,
         printers: [
             {
@@ -52,6 +54,7 @@ const printerCategories: PrinterCategory[] = [
     {
         id: "binding",
         title: "Binding Services",
+        image: "/images/category-binding.jpg",
         icon: Maximize,
         printers: [
             {
@@ -94,6 +97,7 @@ const printerCategories: PrinterCategory[] = [
     {
         id: "design",
         title: "Graphic Design",
+        image: "/images/category-design.jpg",
         icon: Layers,
         printers: [
             {
@@ -175,16 +179,26 @@ const Service = () => {
                             transition={{ duration: 0.8, delay: catIdx * 0.1 }}
                             className="flex flex-col gap-8"
                         >
-                            <div className="flex items-center justify-between border-b border-black/5 pb-6">
-                                <div className="flex items-center gap-4">
-                                    <div className="w-16 h-16 bg-white shadow-xl shadow-black/5 rounded-2xl flex items-center justify-center text-[#cfac68]">
-                                        <category.icon size={32} strokeWidth={1.5} />
-                                    </div>
-                                    <div>
-                                        <h3 className="text-2xl md:text-4xl font-bold text-black ">{category.title}</h3>
-                                        <p className="text-black/40 font-medium uppercase text-[10px] tracking-widest mt-1">
-                                            {category.printers.length} available services
-                                        </p>
+                            <div className="relative h-[200px] md:h-[300px] w-full rounded-3xl overflow-hidden shadow-2xl shadow-black/10">
+                                <Image
+                                    src={category.image}
+                                    alt={category.title}
+                                    fill
+                                    className="object-cover"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent" />
+
+                                <div className="absolute inset-0 flex items-center px-8 md:px-12">
+                                    <div className="flex items-center gap-6">
+                                        <div className="w-16 h-16 md:w-20 md:h-20 bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl flex items-center justify-center text-white shadow-xl">
+                                            <category.icon size={36} strokeWidth={1.5} />
+                                        </div>
+                                        <div>
+                                            <h3 className="text-3xl md:text-5xl font-bold text-white tracking-tight">{category.title}</h3>
+                                            <p className="text-white/70 font-medium uppercase text-[10px] md:text-xs tracking-[0.2em] mt-2">
+                                                {category.printers.length} Premium Solutions
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
