@@ -145,7 +145,7 @@ const Service = () => {
 
             <div className="max-w-7xl mx-auto relative z-10">
                 {/* Header Section (Centered to match Products) */}
-                <div className="flex flex-col items-center text-center mb-20">
+                <div className="flex flex-col items-center text-center mb-10">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}

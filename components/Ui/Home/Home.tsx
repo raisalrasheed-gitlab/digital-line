@@ -4,7 +4,9 @@ import About from "@/components/Section/Home/About/About";
 import Service from "@/components/Section/Home/Service/Service";
 import Product from "@/components/Section/Home/Products/Product";
 import Process from "@/components/Section/Home/Process/Process";
+import WhyChooseUs from "@/components/Section/Home/WhyChooseUs/WhyChooseUs";
 import Contact from "@/components/Section/Home/Contact/Contact";
+import Footer from "@/components/Section/Footer/Footer";
 
 const HomeSection = () => {
     return (
@@ -15,7 +17,9 @@ const HomeSection = () => {
             <Service />
             <Product />
             <Process />
+            <WhyChooseUs />
             <Contact />
+            <Footer />
         </main>
     );
 };

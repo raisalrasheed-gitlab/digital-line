@@ -143,7 +143,7 @@ const ProductSection = () => {
                         className="bg-white px-6 py-2 rounded-lg shadow-sm mb-8"
                     >
                         <span className="text-[#cfac68] font-bold tracking-[0.2em] uppercase text-xs">
-                            Proud Projects
+                            Our Products
                         </span>
                     </motion.div>
 

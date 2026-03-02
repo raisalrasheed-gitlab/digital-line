@@ -79,7 +79,7 @@ const Contact = () => {
     };
 
     return (
-        <section className="py-20 md:py-24 px-[5vw] bg-[#061e1e] text-white overflow-hidden">
+        <section id="contact" className="py-12 md:py-16 px-[5vw] bg-[#061e1e] text-white overflow-hidden">
             <div className="max-w-7xl mx-auto">
                 <div className="flex flex-col gap-16 lg:gap-24">
                     {/* Top Section: Form */}
@@ -89,7 +89,7 @@ const Contact = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <div className="inline-flex items-center gap-2 px-4 py-2 border border-[#cfac68]/40 border-dashed rounded-lg mb-8 bg-[#cfac68]/5">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 border border-[#cfac68]/40  rounded-lg mb-8 bg-[#cfac68]/5">
                             <Box size={18} className="text-[#cfac68]" />
                             <span className="text-[#cfac68] font-bold tracking-[0.2em] uppercase text-xs">
                                 Get In Touch

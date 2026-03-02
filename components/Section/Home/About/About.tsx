@@ -34,7 +34,7 @@ const About = () => {
     });
 
     return (
-        <section className="py-12 md:py-16 px-[5vw] bg-white overflow-hidden">
+        <section id="about" className="py-12 md:py-16 px-[5vw] bg-white overflow-hidden">
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
                 {/* Left Content */}
                 <div ref={containerRef} className="flex flex-col gap-10">
