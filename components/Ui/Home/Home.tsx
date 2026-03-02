@@ -4,6 +4,7 @@ import About from "@/components/Section/Home/About/About";
 import Service from "@/components/Section/Home/Service/Service";
 import Product from "@/components/Section/Home/Products/Product";
 import Process from "@/components/Section/Home/Process/Process";
+import Contact from "@/components/Section/Home/Contact/Contact";
 
 const HomeSection = () => {
     return (
@@ -14,6 +15,7 @@ const HomeSection = () => {
             <Service />
             <Product />
             <Process />
+            <Contact />
         </main>
     );
 };
