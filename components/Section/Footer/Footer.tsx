@@ -83,14 +83,14 @@ const Footer = () => {
                     </div>
 
                     {/* Newsletter Card */}
-                    <div className="lg:col-span-4">
+                    {/* <div className="lg:col-span-4">
                         <motion.div
                             initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             className="bg-[#cfac68] rounded-[2rem] p-8 md:p-10 space-y-8 relative overflow-hidden group shadow-2xl shadow-[#cfac68]/20"
                         >
-                            {/* Decorative Circles */}
+
                             <div className="absolute -top-10 -right-10 w-32 h-32 bg-white/20 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
                             <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-black/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
 
@@ -122,7 +122,7 @@ const Footer = () => {
                                 </button>
                             </div>
                         </motion.div>
-                    </div>
+                    </div> */}
                 </div>
 
                 {/* Bottom Bar */}

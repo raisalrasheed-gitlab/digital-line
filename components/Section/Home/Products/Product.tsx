@@ -43,16 +43,121 @@ const products = [
     },
     {
         id: 6,
-        title: "CD/DVD Printing",
+        title: "DVD & CD Printing & Covers",
         category: "Media",
-        image: "/images/printing-uv.png",
-        quality: "96%"
+        image: "/images/product-cd-dvd.png",
+        quality: "99%"
     },
     {
         id: 7,
         title: "Custom Calendars",
         category: "Stationery",
         image: "/images/binding-spiral.png",
+        quality: "99%"
+    },
+    {
+        id: 8,
+        title: "Hardcover Books",
+        category: "Premium",
+        image: "/images/binding-case.png",
+        quality: "99%"
+    },
+    {
+        id: 9,
+        title: "Custom Notepads",
+        category: "Branding",
+        image: "/images/binding-padding.png",
+        quality: "98%"
+    },
+    {
+        id: 10,
+        title: "Premium Shopping Bags",
+        category: "Branding",
+        image: "/images/product-shopping-bag.png",
+        quality: "99%"
+    },
+    {
+        id: 11,
+        title: "Branded USB Drives",
+        category: "Corporate Gifts",
+        image: "/images/product-usb.png",
+        quality: "97%"
+    },
+    {
+        id: 12,
+        title: "Custom Ceramic Mugs",
+        category: "Corporate Gifts",
+        image: "/images/product-mug.png",
+        quality: "98%"
+    },
+    {
+        id: 13,
+        title: "Luxury Executive Pens",
+        category: "Corporate Gifts",
+        image: "/images/product-pen.png",
+        quality: "100%"
+    },
+    {
+        id: 14,
+        title: "PU Leather Notebooks",
+        category: "Stationery",
+        image: "/images/product-notebook.png",
+        quality: "99%"
+    },
+    {
+        id: 15,
+        title: "Promotional Coupons",
+        category: "Promotion",
+        image: "/images/product-coupons-scratch.png",
+        quality: "96%"
+    },
+    {
+        id: 16,
+        title: "Custom Wall Calendars",
+        category: "Stationery",
+        image: "/images/product-calendar.png",
+        quality: "99%"
+    },
+    {
+        id: 17,
+        title: "Marketing Materials",
+        category: "Marketing",
+        image: "/images/category-printing.jpg",
+        quality: "98%"
+    },
+    {
+        id: 18,
+        title: "Wax & Embossing Seals",
+        category: "Specialty",
+        image: "/images/product-wax-embossing-seal.png",
+        quality: "99%"
+    },
+    {
+        id: 19,
+        title: "ID Cards & Badges",
+        category: "Corporate",
+        image: "/images/product-id-lanyard-badge.png",
+        quality: "98%"
+    },
+    {
+        id: 20,
+        title: "Rollup & Popup Displays",
+        category: "Marketing",
+        image: "/images/product-display-banners-stamps.png",
+        quality: "97%"
+    },
+    {
+        id: 21,
+        title: "Exhibition Flags",
+        category: "Marketing",
+        image: "/images/product-exhibition-flags-backdrops.png",
+        quality: "98%"
+    },
+    {
+        id: 22,
+        title: "Envelopes & Folders",
+        category: "Essentials",
+        image: "/images/product-stationery-pack-envelopes-folders.png",
         quality: "99%"
     }
 ];
@@ -118,8 +223,10 @@ const ProductSection = () => {
         }
     }, []);
 
-    // Pagination logic: assuming 3 main stops/pages for the dots
-    const activeDotIndex = Math.min(2, Math.floor(scrollProgress / 34));
+    // Pagination logic: dynamic based on number of products
+    const itemsPerPage = 1; // Assuming 1 main central item emphasis for mobile/desktop snap
+    const totalDots = 5; // We'll show 5 dots to represent segments of the long list
+    const activeDotIndex = Math.min(totalDots - 1, Math.floor((scrollProgress / 100) * totalDots));
 
     return (
         <section id="products" className="py-12 md:py-16 px-[5vw] bg-[#f8f9fa] relative overflow-x-hidden">
@@ -175,7 +282,7 @@ const ProductSection = () => {
 
                     {/* Custom Pagination (Centered Bottom) */}
                     <div className="flex justify-center items-center gap-3 mt-4">
-                        {[0, 1, 2].map((i) => (
+                        {Array.from({ length: totalDots }).map((_, i) => (
                             <motion.div
                                 key={i}
                                 initial={false}

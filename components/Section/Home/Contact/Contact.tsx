@@ -79,7 +79,7 @@ const Contact = () => {
     };
 
     return (
-        <section id="contact" className="py-12 md:py-16 px-[5vw] bg-[#061e1e] text-white overflow-hidden">
+        <section id="contact" className="py-12 md:py-16 px-[5vw] bg-white text-black overflow-hidden">
             <div className="max-w-7xl mx-auto">
                 <div className="flex flex-col gap-16 lg:gap-24">
                     {/* Top Section: Form */}
@@ -89,65 +89,65 @@ const Contact = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <div className="inline-flex items-center gap-2 px-4 py-2 border border-[#cfac68]/40  rounded-lg mb-8 bg-[#cfac68]/5">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 border border-[#cfac68]/40 rounded-lg mb-8 bg-[#cfac68]/5">
                             <Box size={18} className="text-[#cfac68]" />
                             <span className="text-[#cfac68] font-bold tracking-[0.2em] uppercase text-xs">
                                 Get In Touch
                             </span>
                         </div>
 
-                        <h2 className="text-5xl md:text-6xl font-bold mb-12 leading-[1.1]">
-                            Drop us a Line <span className="text-white/40">Here.</span>
+                        <h2 className="text-5xl md:text-6xl font-bold mb-12 leading-[1.1] text-black">
+                            Drop us a Line <span className="text-black/40">Here.</span>
                         </h2>
 
                         <form className="space-y-8 max-w-4xl">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div className="space-y-2">
-                                    <label className="text-sm font-medium text-white/60 ">Full Name *</label>
+                                    <label className="text-sm font-medium text-black/60 ">Full Name *</label>
                                     <input
                                         type="text"
                                         placeholder="Full Name"
-                                        className="mt-2 w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 outline-none focus:border-[#cfac68] transition-colors"
+                                        className="mt-2 w-full bg-black/5 border border-black/10 rounded-xl px-6 py-4 outline-none focus:border-[#cfac68] transition-colors text-black placeholder:text-black/40"
                                     />
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-sm font-medium text-white/60">Email Address *</label>
+                                    <label className="text-sm font-medium text-black/60">Email Address *</label>
                                     <input
                                         type="email"
                                         placeholder="Email Address"
-                                        className="mt-2 w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 outline-none focus:border-[#cfac68] transition-colors"
+                                        className="mt-2 w-full bg-black/5 border border-black/10 rounded-xl px-6 py-4 outline-none focus:border-[#cfac68] transition-colors text-black placeholder:text-black/40"
                                     />
                                 </div>
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 -mt-4 gap-4">
                                 <div className="space-y-2">
-                                    <label className="text-sm font-medium text-white/60">Phone number *</label>
+                                    <label className="text-sm font-medium text-black/60">Phone number *</label>
                                     <input
                                         type="tel"
                                         placeholder="Phone number"
-                                        className="mt-2 w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 outline-none focus:border-[#cfac68] transition-colors"
+                                        className="mt-2 w-full bg-black/5 border border-black/10 rounded-xl px-6 py-4 outline-none focus:border-[#cfac68] transition-colors text-black placeholder:text-black/40"
                                     />
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-sm font-medium text-white/60">Choose a option</label>
+                                    <label className="text-sm font-medium text-black/60">Choose a option</label>
                                     <div className="relative mt-2">
-                                        <select className="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 outline-none appearance-none focus:border-[#cfac68] transition-colors">
+                                        <select className="w-full bg-black/5 border border-black/10 rounded-xl px-6 py-4 outline-none appearance-none focus:border-[#cfac68] transition-colors text-black">
                                             <option>Business Strategy</option>
                                             <option>Printing Solutions</option>
                                             <option>Graphic Design</option>
                                         </select>
-                                        <ChevronDown size={20} className="absolute right-6 top-1/2 -translate-y-1/2 text-white/40 pointer-events-none" />
+                                        <ChevronDown size={20} className="absolute right-6 top-1/2 -translate-y-1/2 text-black/40 pointer-events-none" />
                                     </div>
                                 </div>
                             </div>
 
                             <div className="-mt-4">
-                                <label className="text-sm font-medium text-white/60">Message here... *</label>
+                                <label className="text-sm font-medium text-black/60">Message here... *</label>
                                 <textarea
                                     placeholder="Message here..."
                                     rows={5}
-                                    className="mt-2 w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 outline-none focus:border-[#cfac68] transition-colors resize-none"
+                                    className="mt-2 w-full bg-black/5 border border-black/10 rounded-xl px-6 py-4 outline-none focus:border-[#cfac68] transition-colors resize-none text-black placeholder:text-black/40"
                                 />
                             </div>
 
@@ -167,10 +167,10 @@ const Contact = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.8, delay: 0.2 }}
-                            className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-[2.5rem] p-8 md:p-12 relative overflow-hidden"
+                            className="bg-black/5 backdrop-blur-sm border border-black/10 rounded-[2.5rem] p-8 md:p-12 relative overflow-hidden"
                         >
-                            <h3 className="text-2xl md:text-3xl font-bold mb-8 relative z-10">
-                                Client Feedback <span className="text-white/40">({testimonials[activeTestimonial].rating})</span>
+                            <h3 className="text-2xl md:text-3xl font-bold mb-8 relative z-10 text-black">
+                                Client Feedback <span className="text-black/40">({testimonials[activeTestimonial].rating})</span>
                             </h3>
 
                             <div className="relative min-h-[300px] md:min-h-[250px]">
@@ -190,7 +190,7 @@ const Contact = () => {
                                     >
                                         <div className="mb-12">
                                             <Quote size={64} className="text-[#cfac68] opacity-50 mb-6" />
-                                            <p className="text-lg md:text-2xl leading-relaxed text-white/90 italic font-medium">
+                                            <p className="text-lg md:text-2xl leading-relaxed text-black/90 italic font-medium">
                                                 "{testimonials[activeTestimonial].quote}"
                                             </p>
                                         </div>
@@ -198,7 +198,7 @@ const Contact = () => {
                                 </AnimatePresence>
                             </div>
 
-                            <div className="flex flex-col md:flex-row items-center justify-between gap-8 pt-8 border-t border-white/10 relative z-10">
+                            <div className="flex flex-col md:flex-row items-center justify-between gap-8 pt-8 border-t border-black/10 relative z-10">
                                 <div className="flex items-center gap-4">
                                     <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-[#cfac68]">
                                         <Image
@@ -209,23 +209,23 @@ const Contact = () => {
                                         />
                                     </div>
                                     <div>
-                                        <h4 className="text-xl font-bold">{testimonials[activeTestimonial].author}</h4>
-                                        <p className="text-white/40">{testimonials[activeTestimonial].role}</p>
+                                        <h4 className="text-xl font-bold text-black">{testimonials[activeTestimonial].author}</h4>
+                                        <p className="text-black/40">{testimonials[activeTestimonial].role}</p>
                                     </div>
                                 </div>
 
                                 <div className="flex gap-4">
                                     <button
                                         onClick={handlePrev}
-                                        className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors"
+                                        className="w-12 h-12 rounded-full border border-black/10 flex items-center justify-center hover:bg-black/10 transition-colors"
                                     >
-                                        <ChevronLeft size={20} />
+                                        <ChevronLeft size={20} className="text-black" />
                                     </button>
                                     <button
                                         onClick={handleNext}
-                                        className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors"
+                                        className="w-12 h-12 rounded-full border border-black/10 flex items-center justify-center hover:bg-black/10 transition-colors"
                                     >
-                                        <ChevronRight size={20} />
+                                        <ChevronRight size={20} className="text-black" />
                                     </button>
                                 </div>
                             </div>

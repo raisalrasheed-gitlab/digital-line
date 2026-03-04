@@ -121,13 +121,12 @@ const WhyChooseUs = () => {
                     {/* Right: Stats Grid */}
                     <div className="lg:col-span-12 xl:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-6">
                         {/* Highlights Card */}
-                        <motion.div
+                        {/* <motion.div
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             className="md:col-span-2 lg:col-span-1 bg-[#cfac68] rounded-[2rem] p-8 relative overflow-hidden group shadow-xl shadow-[#cfac68]/20 flex flex-col justify-between min-h-[300px]"
                         >
-                            {/* Background Image with Overlay */}
 
 
                             <div className="flex justify-between items-start relative z-10">
@@ -157,7 +156,7 @@ const WhyChooseUs = () => {
                                     We have 100+ happy <br /> customer.
                                 </h3>
                             </div>
-                        </motion.div>
+                        </motion.div> */}
 
                         {/* Stat Cards */}
                         <div className="grid grid-cols-1 gap-6">

@@ -7,6 +7,7 @@ import Product from "@/components/Section/Home/Products/Product";
 import Process from "@/components/Section/Home/Process/Process";
 import WhyChooseUs from "@/components/Section/Home/WhyChooseUs/WhyChooseUs";
 import Contact from "@/components/Section/Home/Contact/Contact";
+import InstagramSection from "@/components/Section/Home/Instagram/Instagram";
 import Footer from "@/components/Section/Footer/Footer";
 
 const HomeSection = () => {
@@ -20,6 +21,7 @@ const HomeSection = () => {
             <Product />
             <Process />
             <WhyChooseUs />
+            <InstagramSection />
             <Contact />
             <Footer />
         </main>
