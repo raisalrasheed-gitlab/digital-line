@@ -34,23 +34,27 @@ const Footer = () => {
                             Digital Line Graphics LLC - Providing excellence in digital printing and creative solutions since 2003.
                         </p>
                         <div className="space-y-4">
-                            <div className="flex items-center gap-4 text-white/80 hover:text-[#cfac68] transition-colors cursor-pointer">
-                                <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center">
+                            <div className="flex items-start gap-4 text-white/80 hover:text-[#cfac68] transition-colors cursor-pointer">
+                                <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center shrink-0">
                                     <MapPin size={20} />
                                 </div>
-                                <span className="text-sm">Sharjah, UAE</span>
+                                <span className="text-sm">Maliha Rd, Muwaileh, Sharjah</span>
                             </div>
-                            <div className="flex items-center gap-4 text-white/80 hover:text-[#cfac68] transition-colors cursor-pointer">
-                                <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center">
+                            <div className="flex items-start gap-4 text-white/80 hover:text-[#cfac68] transition-colors cursor-pointer">
+                                <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center shrink-0">
                                     <Phone size={20} />
                                 </div>
-                                <span className="text-sm">+971 6 534 1122</span>
+                                <div className="flex flex-col gap-1 text-sm">
+                                    <span>+971 6577 8411 | +971 6704 3572</span>
+                                    <span>+971 56161 9111 | +971 50134 6467</span>
+                                    <span>+971 50 555 2194</span>
+                                </div>
                             </div>
                             <div className="flex items-center gap-4 text-white/80 hover:text-[#cfac68] transition-colors cursor-pointer">
-                                <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center">
+                                <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center shrink-0">
                                     <Mail size={20} />
                                 </div>
-                                <span className="text-sm">info@digitalline.ae</span>
+                                <span className="text-sm">dlinegraphics@gmail.com</span>
                             </div>
                         </div>
                     </div>

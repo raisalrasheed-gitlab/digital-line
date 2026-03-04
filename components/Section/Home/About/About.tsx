@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform, useSpring, AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
 import Image from "next/image";
-import { ArrowUpRight, Play } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 const About = () => {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -126,22 +126,19 @@ const About = () => {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     className="relative aspect-[3/4.5] lg:aspect-[3/4] rounded-[2.5rem] overflow-hidden  group"
                 >
-                    <Image
-                        src="/images/about-partner.png"
-                        alt="About Us Partner"
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    <video
+                        src="/34594-402634196_medium.mp4"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-                    <button className="absolute inset-0 m-auto w-24 h-24 bg-white/20 backdrop-blur-xl rounded-full flex items-center justify-center text-white border border-white/30 hover:bg-white/40 hover:scale-110 transition-all duration-300 shadow-2xl">
-                        <div className="bg-white/30 p-4 rounded-full">
-                            <Play size={40} fill="white" className="ml-1" />
-                        </div>
-                    </button>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
 
                     {/* Decorative element */}
-                    <div className="absolute top-8 right-8 w-24 h-24 border-t-2 border-r-2 border-white/30 rounded-tr-3xl" />
-                    <div className="absolute bottom-8 left-8 w-24 h-24 border-b-2 border-l-2 border-white/30 rounded-bl-3xl" />
+                    <div className="absolute top-8 right-8 w-24 h-24 border-t-2 border-r-2 border-white/30 rounded-tr-3xl pointer-events-none" />
+                    <div className="absolute bottom-8 left-8 w-24 h-24 border-b-2 border-l-2 border-white/30 rounded-bl-3xl pointer-events-none" />
                 </motion.div>
             </div>
         </section>
