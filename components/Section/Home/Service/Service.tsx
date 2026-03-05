@@ -11,6 +11,7 @@ type PrinterModel = {
     description: string;
     image: string;
     features: string[];
+    products?: string[];
 };
 
 type PrinterCategory = {
@@ -33,21 +34,56 @@ const printerCategories: PrinterCategory[] = [
                 name: "Digital Printing",
                 description: "Fast, high-quality printing for short runs and personalized documents. We utilize advanced digital presses to ensure sharp detail and vibrant colors with rapid turnaround times.",
                 image: "/images/printing-digital.png",
-                features: ["Quick Turnaround", "On-Demand Printing", "Personalization"]
+                features: ["Quick Turnaround", "On-Demand Printing", "Personalization"],
+                products: [
+                    "Catalogue", "Brochure", "Booklets", "Profiles", "Flyers",
+                    "Business Card", "Letter Head", "Coupons", "Labels",
+                    "Stickers", "Wobblers", "Tags", "Table calendars",
+                    "Note Pads", "Invitation cards", "Wedding cards", "Greeting cards"
+                ]
             },
             {
                 id: "offset",
                 name: "Offset Printing",
                 description: "The gold standard for high-volume, cost-effective printing. Our offset facilities handle large-scale jobs with unparalleled consistency and professional finish.",
                 image: "/images/printing-offset.png",
-                features: ["High Volume", "Cost-Effective", "Consistent Quality"]
+                features: ["High Volume", "Cost-Effective", "Consistent Quality"],
+                products: [
+                    "Invoices", "Vouchers", "NCR Jobs", "Flyers", "Wall Calendar",
+                    "Paper Shopping Bag", "Boxes", "Table Matts", "Car Matts"
+                ]
             },
             {
                 id: "uv",
                 name: "UV Printing",
                 description: "Cutting-edge technology that uses UV light to instantly cure ink on a vast range of substrates. Perfect for specialty materials and high-durability requirements.",
                 image: "/images/printing-uv.png",
-                features: ["Instant Curing", "Specialty Materials", "Vibrant Finishes"]
+                features: ["Instant Curing", "Specialty Materials", "Vibrant Finishes"],
+                products: [
+                    "Acrylic", "Glass", "Metal", "Wood", "Plastics (PVC, PET, ABS)",
+                    "Leather", "Pen", "USB", "Bottles", "Gift Items"
+                ]
+            },
+            {
+                id: "large-format",
+                name: "Large Format Printing",
+                description: "High-impact visual solutions for both indoor and outdoor branding. From massive banners to precision-cut stickers and professional signage that commands attention.",
+                image: "/images/printing-large.png",
+                features: ["Vibrant Color Reproduction", "Durable Material Options", "Large Scale Capabilities"],
+                products: [
+                    "Poster", "Banner", "Indoor and Out Door stickers", "Roll-up",
+                    "Promotional Tables", "Flex", "Indoor and Out door Signs"
+                ]
+            },
+            {
+                id: "screen-printing",
+                name: "Screen Printing",
+                description: "Versatile and durable printing method ideal for a wide range of materials. We provide consistent, high-quality results on everything from fabrics and plastics to metals and specialty gifts.",
+                image: "/images/printing-screen.png",
+                features: ["High Durability", "Universal Substrates", "Rich Color Density"],
+                products: [
+                    "PVC stickers", "Ready-made Shopping Bags", "Pen", "Special Gifts", "Metal Boards", "Product Printing"
+                ]
             }
         ]
     },
@@ -57,13 +93,7 @@ const printerCategories: PrinterCategory[] = [
         image: "/images/category-binding.jpg",
         icon: Maximize,
         printers: [
-            {
-                id: "padding",
-                name: "Padding",
-                description: "Want Removable note pads? No problem. We can create padded sheets of any our stocks of paper in a similar way to our perfect bound books, just without the burring. Great to make branded note pads.",
-                image: "/images/binding-padding.png",
-                features: ["Removable Sheets", "Branded Notepads", "Any Paper Stock"]
-            },
+
             {
                 id: "perfect-binding",
                 name: "Perfect Binding",
@@ -91,7 +121,28 @@ const printerCategories: PrinterCategory[] = [
                 description: "Premium presentation with a stiff board cover wrapped in printed sheet or cloth. The book block is glued into the inside for a high-end nipped profile.",
                 image: "/images/binding-case.png",
                 features: ["Hardcover Premium", "Cloth/Printed Wrap", "Custom Quotes"]
-            }
+            },
+            {
+                id: "gum-binding",
+                name: "Gum Binding",
+                description: "A professional binding method where pages are secured with a high-quality flexible adhesive. Ideal for notepads, edge-glued forms, and reports requiring a clean, flat-back finish.",
+                image: "/images/binding-gum.png",
+                features: ["Strong Flexible Adhesive", "Clean Flat Finish", "Perfect for Pads"]
+            },
+            {
+                id: "coupon-binding",
+                name: "Coupon Book Binding",
+                description: "Specialized binding for books containing perforated sheets. Perfect for discount vouchers, multi-use tickets, and promotional booklets where easy sheet removal is essential.",
+                image: "/images/binding-coupon.png",
+                features: ["Perforated for Easy Tear", "Durable Spine", "Voucher & Ticket Ready"]
+            },
+            {
+                id: "padding",
+                name: "Padding",
+                description: "Want Removable note pads? No problem. We can create padded sheets of any our stocks of paper in a similar way to our perfect bound books, just without the burring. Great to make branded note pads.",
+                image: "/images/binding-padding.png",
+                features: ["Removable Sheets", "Branded Notepads", "Any Paper Stock"]
+            },
         ]
     },
     {
@@ -107,6 +158,62 @@ const printerCategories: PrinterCategory[] = [
                 image: "/images/printer-nature-concept.jpg",
                 features: ["Multi-Material Support", "LED UV Curing", "Precision Printing"]
             }
+        ]
+    }, {
+        id: "die-cutting",
+        title: "Die Cutting / Plotter Cutting",
+        image: "/images/category-die-cutting.png",
+        icon: Layers,
+        printers: [
+
+        ]
+    }, {
+        id: "embossing",
+        title: "Embossing",
+        image: "/images/category-embossing.png",
+        icon: Layers,
+        printers: [
+
+        ]
+    }, {
+        id: "de-embossing",
+        title: "De-Embossing",
+        image: "/images/category-de-embossing.png",
+        icon: Layers,
+        printers: [
+
+        ]
+    }, {
+        id: "all-kinds-of-foiling",
+        title: "All Kinds of Foiling",
+        image: "/images/category-foiling.png",
+        icon: Layers,
+        printers: [
+
+        ]
+    }, {
+        id: "spot-uv-printing",
+        title: "Spot UV Printing",
+        image: "/images/category-spot-uv.png",
+        icon: Layers,
+        printers: [
+
+        ]
+    }, {
+        id: "epoxy",
+        title: "Epoxy",
+        image: "/images/category-epoxy.png",
+        icon: Layers,
+        printers: [
+
+        ]
+    }, {
+        id: "engraving",
+        title: "Engraving",
+        image: "/images/category-engraving.png",
+        icon: Layers,
+        printers: [
+
         ]
     }
 ];
@@ -196,7 +303,7 @@ const Service = () => {
                                         <div>
                                             <h3 className="text-3xl md:text-5xl font-bold text-white tracking-tight">{category.title}</h3>
                                             <p className="text-white/70 font-medium uppercase text-[10px] md:text-xs tracking-[0.2em] mt-2">
-                                                {category.printers.length} Premium Solutions
+                                                {category?.printers?.length || ""} Premium Solutions
                                             </p>
                                         </div>
                                     </div>
@@ -301,6 +408,25 @@ const Service = () => {
                                                                             </motion.div>
                                                                         ))}
                                                                     </motion.div>
+
+                                                                    {printer.products && (
+                                                                        <motion.div
+                                                                            variants={itemVariants}
+                                                                            className="mt-8"
+                                                                        >
+                                                                            <h5 className="text-sm font-bold text-[#cfac68] uppercase tracking-widest mb-4">Available Products</h5>
+                                                                            <div className="flex flex-wrap gap-2">
+                                                                                {printer.products.map((product, i) => (
+                                                                                    <span
+                                                                                        key={i}
+                                                                                        className="px-4 py-2 bg-white border border-black/5 rounded-full text-sm font-medium text-black/70 hover:border-[#cfac68]/30 hover:text-black transition-colors"
+                                                                                    >
+                                                                                        {product}
+                                                                                    </span>
+                                                                                ))}
+                                                                            </div>
+                                                                        </motion.div>
+                                                                    )}
                                                                 </div>
                                                             </motion.div>
                                                         </motion.div>

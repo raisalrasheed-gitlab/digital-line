@@ -18,7 +18,7 @@ const Contact = () => {
         {
             id: 1,
             rating: "4.8/out of 200",
-            quote: "The results we’ve seen after partnering with Digital Line are beyond our expectations. They not only understood our vision but also brought new ideas to the table that have taken our business to the next level. Their expertise and commitment to success make them a trusted.",
+            quote: "The results we’ve seen after partnering with Digital Line Graphics LLC are beyond our expectations. They not only understood our vision but also brought new ideas to the table that have taken our business to the next level. Their expertise and commitment to success make them a trusted.",
             author: "Ralph Edwards",
             role: "Co. Founder",
             image: "/images/about-partner.png"
@@ -34,7 +34,7 @@ const Contact = () => {
         {
             id: 3,
             rating: "5.0/out of 200",
-            quote: "Exceptional service and attention to detail. Digital Line Grafics helped us rebrand our entire product line with stunning visuals and high-quality packaging. Their team is professional, creative, and truly cares about the success of their clients.",
+            quote: "Exceptional service and attention to detail. Digital Line Graphics LLC helped us rebrand our entire product line with stunning visuals and high-quality packaging. Their team is professional, creative, and truly cares about the success of their clients.",
             author: "Michael Chen",
             role: "Project Manager",
             image: "/images/about-partner.png"

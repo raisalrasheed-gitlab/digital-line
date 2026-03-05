@@ -98,7 +98,7 @@ const WhyChooseUs = () => {
                             transition={{ delay: 0.1 }}
                             className="text-lg text-black/60 max-w-xl leading-relaxed"
                         >
-                            With over two decades of experience, Digital Line Graphics is your trusted partner for premium printing and design. Our commitment to quality and innovation ensures your business stands out.
+                            With over two decades of experience, Digital Line Graphics LLC is your trusted partner for premium printing and design. Our commitment to quality and innovation ensures your business stands out.
                         </motion.p>
 
                         <motion.div
