@@ -3,7 +3,8 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { Box, ChevronDown, Send, Quote, ChevronLeft, ChevronRight, ArrowUpRight } from "lucide-react";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -13,6 +14,44 @@ const Contact = () => {
         option: "Business Strategy",
         message: ""
     });
+
+    const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setStatus("loading");
+
+        try {
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(formData)
+            });
+
+            const data = await res.json();
+
+            if (data.success) {
+                setStatus("success");
+                setFormData({
+                    fullName: "",
+                    email: "",
+                    phone: "",
+                    option: "Business Strategy",
+                    message: ""
+                });
+            } else {
+                setStatus("error");
+            }
+
+        } catch (error) {
+            console.error(error);
+            setStatus("error");
+        }
+
+        setTimeout(() => setStatus("idle"), 5000);
+    };
 
     const testimonials = [
         {
@@ -100,13 +139,17 @@ const Contact = () => {
                             Drop us a Line <span className="text-black/40">Here.</span>
                         </h2>
 
-                        <form className="space-y-8 max-w-4xl">
+                        <form onSubmit={handleSubmit} className="space-y-8 max-w-4xl">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div className="space-y-2">
                                     <label className="text-sm font-medium text-black/60 ">Full Name *</label>
                                     <input
                                         type="text"
+                                        name="user_name"
+                                        value={formData.fullName}
+                                        onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                                         placeholder="Full Name"
+                                        required
                                         className="mt-2 w-full bg-black/5 border border-black/10 rounded-xl px-6 py-4 outline-none focus:border-[#cfac68] transition-colors text-black placeholder:text-black/40"
                                     />
                                 </div>
@@ -114,7 +157,11 @@ const Contact = () => {
                                     <label className="text-sm font-medium text-black/60">Email Address *</label>
                                     <input
                                         type="email"
+                                        name="user_email"
+                                        value={formData.email}
+                                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                         placeholder="Email Address"
+                                        required
                                         className="mt-2 w-full bg-black/5 border border-black/10 rounded-xl px-6 py-4 outline-none focus:border-[#cfac68] transition-colors text-black placeholder:text-black/40"
                                     />
                                 </div>
@@ -125,14 +172,23 @@ const Contact = () => {
                                     <label className="text-sm font-medium text-black/60">Phone number *</label>
                                     <input
                                         type="tel"
+                                        name="user_phone"
+                                        value={formData.phone}
+                                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                                         placeholder="Phone number"
+                                        required
                                         className="mt-2 w-full bg-black/5 border border-black/10 rounded-xl px-6 py-4 outline-none focus:border-[#cfac68] transition-colors text-black placeholder:text-black/40"
                                     />
                                 </div>
                                 <div className="space-y-2">
                                     <label className="text-sm font-medium text-black/60">Choose a option</label>
                                     <div className="relative mt-2">
-                                        <select className="w-full bg-black/5 border border-black/10 rounded-xl px-6 py-4 outline-none appearance-none focus:border-[#cfac68] transition-colors text-black">
+                                        <select
+                                            name="user_option"
+                                            value={formData.option}
+                                            onChange={(e) => setFormData({ ...formData, option: e.target.value })}
+                                            className="w-full bg-black/5 border border-black/10 rounded-xl px-6 py-4 outline-none appearance-none focus:border-[#cfac68] transition-colors text-black"
+                                        >
                                             <option>Business Strategy</option>
                                             <option>Printing Solutions</option>
                                             <option>Graphic Design</option>
@@ -145,18 +201,34 @@ const Contact = () => {
                             <div className="-mt-4">
                                 <label className="text-sm font-medium text-black/60">Message here... *</label>
                                 <textarea
+                                    name="message"
+                                    value={formData.message}
+                                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                                     placeholder="Message here..."
                                     rows={5}
+                                    required
                                     className="mt-2 w-full bg-black/5 border border-black/10 rounded-xl px-6 py-4 outline-none focus:border-[#cfac68] transition-colors resize-none text-black placeholder:text-black/40"
                                 />
                             </div>
 
-                            <button className="group flex items-center gap-4 bg-[#cfac68] text-white px-8 py-4 rounded-full font-bold transition-all duration-300 hover:bg-[#b8955a] hover:scale-105 active:scale-95 shadow-xl shadow-[#cfac68]/20 mt-4">
-                                Send Message
-                                <div className="w-10 h-10 rounded-full bg-black flex items-center justify-center transition-transform duration-300 group-hover:rotate-45">
-                                    <ArrowUpRight size={20} strokeWidth={2.5} className="text-white" />
-                                </div>
-                            </button>
+                            <div className="flex flex-col gap-4">
+                                <button
+                                    type="submit"
+                                    disabled={status === "loading"}
+                                    className="group flex items-center gap-4 bg-[#cfac68] text-white px-8 py-4 rounded-full font-bold transition-all duration-300 hover:bg-[#b8955a] hover:scale-105 active:scale-95 shadow-xl shadow-[#cfac68]/20 mt-4 disabled:opacity-50 disabled:cursor-not-allowed"
+                                >
+                                    {status === "loading" ? "Sending..." : "Send Message"}
+                                    <div className="w-10 h-10 rounded-full bg-black flex items-center justify-center transition-transform duration-300 group-hover:rotate-45">
+                                        <ArrowUpRight size={20} strokeWidth={2.5} className="text-white" />
+                                    </div>
+                                </button>
+                                {status === "success" && (
+                                    <p className="text-green-600 font-medium">Message sent successfully! We will get back to you soon.</p>
+                                )}
+                                {status === "error" && (
+                                    <p className="text-red-600 font-medium">Something went wrong. Please try again or contact us directly.</p>
+                                )}
+                            </div>
                         </form>
                     </motion.div>
 
@@ -233,7 +305,7 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     );
 };
 

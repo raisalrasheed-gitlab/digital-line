@@ -8,7 +8,9 @@ import Process from "@/components/Section/Home/Process/Process";
 import WhyChooseUs from "@/components/Section/Home/WhyChooseUs/WhyChooseUs";
 import Contact from "@/components/Section/Home/Contact/Contact";
 import InstagramSection from "@/components/Section/Home/Instagram/Instagram";
+import Map from "@/components/Section/Home/Map/Map";
 import Footer from "@/components/Section/Footer/Footer";
+import WhatsAppButton from "@/components/Ui/WhatsAppButton";
 
 const HomeSection = () => {
     return (
@@ -22,8 +24,10 @@ const HomeSection = () => {
             <Process />
             <WhyChooseUs />
             <InstagramSection />
+            <Map />
             <Contact />
             <Footer />
+            <WhatsAppButton />
         </main>
     );
 };

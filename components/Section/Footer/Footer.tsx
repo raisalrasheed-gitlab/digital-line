@@ -12,7 +12,8 @@ import {
     Phone,
     MapPin,
     ArrowUpRight,
-    Send
+    Send,
+    MessageCircle
 } from "lucide-react";
 
 const Footer = () => {
@@ -31,31 +32,45 @@ const Footer = () => {
                             />
                         </div>
                         <p className="text-white/60 text-lg leading-relaxed max-w-sm">
-                            Digital Line Graphics LLC - Providing excellence in digital printing and creative solutions since 2003.
+                            Digital Line Graphics LLC - Providing excellence in digital printing and creative solutions since 2002.
                         </p>
                         <div className="space-y-4">
                             <div className="flex items-start gap-4 text-white/80 hover:text-[#cfac68] transition-colors cursor-pointer">
                                 <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center shrink-0">
                                     <MapPin size={20} />
                                 </div>
-                                <span className="text-sm">Maliha Rd, Muwaileh, Sharjah</span>
+                                <span className="text-sm">Maliha Road,
+                                    Muweilah Commercial,
+                                    Near National paint factory
+                                    Sharjah - U.A.E.</span>
                             </div>
                             <div className="flex items-start gap-4 text-white/80 hover:text-[#cfac68] transition-colors cursor-pointer">
                                 <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center shrink-0">
                                     <Phone size={20} />
                                 </div>
                                 <div className="flex flex-col gap-1 text-sm">
-                                    <span>+971 6577 8411 | +971 6704 3572</span>
+                                    <div className="flex items-center gap-2 group/wa">
+                                        <span>+971 6577 8411 | </span>
+                                        <a
+                                            href="https://wa.me/97167043572"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center gap-1.5 text-[#25D366] hover:underline font-bold"
+                                        >
+                                            <MessageCircle size={14} fill="#25D366" />
+                                            +971 6704 3572
+                                        </a>
+                                    </div>
                                     <span>+971 56161 9111 | +971 50134 6467</span>
                                     <span>+971 50 555 2194</span>
                                 </div>
                             </div>
-                            <div className="flex items-center gap-4 text-white/80 hover:text-[#cfac68] transition-colors cursor-pointer">
+                            <a href="mailto:digitalline2022@gmail.com" className="flex items-center gap-4 text-white/80 hover:text-[#cfac68] transition-colors cursor-pointer">
                                 <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center shrink-0">
                                     <Mail size={20} />
                                 </div>
-                                <span className="text-sm">dlinegraphics@gmail.com</span>
-                            </div>
+                                <span className="text-sm">digitalline2022@gmail.com</span>
+                            </a>
                         </div>
                     </div>
 

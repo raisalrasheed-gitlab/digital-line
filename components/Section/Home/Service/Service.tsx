@@ -57,7 +57,7 @@ const printerCategories: PrinterCategory[] = [
                 id: "uv",
                 name: "UV Printing",
                 description: "Cutting-edge technology that uses UV light to instantly cure ink on a vast range of substrates. Perfect for specialty materials and high-durability requirements.",
-                image: "/images/printing-uv.png",
+                image: "/images/uv-printer.jpeg",
                 features: ["Instant Curing", "Specialty Materials", "Vibrant Finishes"],
                 products: [
                     "Acrylic", "Glass", "Metal", "Wood", "Plastics (PVC, PET, ABS)",
@@ -133,7 +133,7 @@ const printerCategories: PrinterCategory[] = [
                 id: "coupon-binding",
                 name: "Coupon Book Binding",
                 description: "Specialized binding for books containing perforated sheets. Perfect for discount vouchers, multi-use tickets, and promotional booklets where easy sheet removal is essential.",
-                image: "/images/binding-coupon.png",
+                image: "/images/coupon-image.jpeg",
                 features: ["Perforated for Easy Tear", "Durable Spine", "Voucher & Ticket Ready"]
             },
             {
@@ -162,7 +162,7 @@ const printerCategories: PrinterCategory[] = [
     }, {
         id: "die-cutting",
         title: "Die Cutting / Plotter Cutting",
-        image: "/images/category-die-cutting.png",
+        image: "/images/die-cutting-2.jpeg",
         icon: Layers,
         printers: [
 

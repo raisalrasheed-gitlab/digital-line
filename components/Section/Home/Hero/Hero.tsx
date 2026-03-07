@@ -32,7 +32,7 @@ const printerData = [
         title: "Mutoh XpertJet 661UF",
         desc: "FLATBED UV PRINT & LED PRINTER",
         smallDesc: "The Mutoh XpertJet 661UF flatbed UV printer enables direct printing on materials like wood, acrylic, metal, and plastic. Perfect for customized products, it delivers sharp details and long-lasting UV prints.",
-        image: "/images/home-hero-printer-4.png"
+        image: "/images/uv-printer.jpeg"
     }
 ];
 
