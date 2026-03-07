@@ -119,8 +119,8 @@ const Contact = () => {
 
     return (
         <section id="contact" className="py-12 md:py-16 px-[5vw] bg-white text-black overflow-hidden">
-            <div className="max-w-7xl mx-auto">
-                <div className="flex flex-col gap-16 lg:gap-24">
+            <div className="max-w-7xl mx-auto flex flex-col items-center">
+                <div className="flex flex-col items-center gap-16 lg:gap-24 w-full">
                     {/* Top Section: Form */}
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -128,18 +128,20 @@ const Contact = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <div className="inline-flex items-center gap-2 px-4 py-2 border border-[#cfac68]/40 rounded-lg mb-8 bg-[#cfac68]/5">
-                            <Box size={18} className="text-[#cfac68]" />
-                            <span className="text-[#cfac68] font-bold tracking-[0.2em] uppercase text-xs">
-                                Get In Touch
-                            </span>
+                        <div className="flex flex-col items-center text-center">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 border border-[#cfac68]/40 rounded-lg mb-8 bg-[#cfac68]/5">
+                                <Box size={18} className="text-[#cfac68]" />
+                                <span className="text-[#cfac68] font-bold tracking-[0.2em] uppercase text-xs">
+                                    Get In Touch
+                                </span>
+                            </div>
+
+                            <h2 className="text-5xl md:text-6xl font-bold mb-12 leading-[1.1] text-black">
+                                Drop us a Line <span className="text-black/40">Here.</span>
+                            </h2>
                         </div>
 
-                        <h2 className="text-5xl md:text-6xl font-bold mb-12 leading-[1.1] text-black">
-                            Drop us a Line <span className="text-black/40">Here.</span>
-                        </h2>
-
-                        <form onSubmit={handleSubmit} className="space-y-8 max-w-4xl">
+                        <form onSubmit={handleSubmit} className="space-y-8 max-w-4xl mx-auto">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div className="space-y-2">
                                     <label className="text-sm font-medium text-black/60 ">Full Name *</label>
@@ -215,7 +217,7 @@ const Contact = () => {
                                 <button
                                     type="submit"
                                     disabled={status === "loading"}
-                                    className="group flex items-center gap-4 bg-[#cfac68] text-white px-8 py-4 rounded-full font-bold transition-all duration-300 hover:bg-[#b8955a] hover:scale-105 active:scale-95 shadow-xl shadow-[#cfac68]/20 mt-4 disabled:opacity-50 disabled:cursor-not-allowed"
+                                    className="group flex items-center gap-4 bg-[#cfac68] text-white px-8 py-4 rounded-full font-bold transition-all duration-300 hover:bg-[#b8955a] hover:scale-105 active:scale-95 shadow-xl shadow-[#cfac68]/20 mt-4 disabled:opacity-50 disabled:cursor-not-allowed mx-auto"
                                 >
                                     {status === "loading" ? "Sending..." : "Send Message"}
                                     <div className="w-10 h-10 rounded-full bg-black flex items-center justify-center transition-transform duration-300 group-hover:rotate-45">
@@ -241,7 +243,7 @@ const Contact = () => {
                             transition={{ duration: 0.8, delay: 0.2 }}
                             className="bg-black/5 backdrop-blur-sm border border-black/10 rounded-[2.5rem] p-8 md:p-12 relative overflow-hidden"
                         >
-                            <h3 className="text-2xl md:text-3xl font-bold mb-8 relative z-10 text-black">
+                            <h3 className="text-2xl md:text-3xl font-bold mb-8 relative z-10 text-black text-center">
                                 Client Feedback <span className="text-black/40">({testimonials[activeTestimonial].rating})</span>
                             </h3>
 

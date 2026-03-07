@@ -6,8 +6,9 @@ import { MapPin } from "lucide-react";
 const Map = () => {
     return (
         <section className="py-12 md:py-16 px-[5vw] bg-white text-black overflow-hidden">
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-7xl mx-auto flex flex-col items-center">
                 <motion.div
+                    className="flex flex-col items-center text-center w-full"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -20,7 +21,7 @@ const Map = () => {
                         </span>
                     </div>
 
-                    <h2 className="text-4xl md:text-5xl font-bold mb-12 leading-[1.1] text-black">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-12 leading-[1.1] text-black text-center">
                         Our <span className="text-black/40">Location.</span>
                     </h2>
 
