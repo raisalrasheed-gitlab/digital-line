@@ -29,10 +29,10 @@ const printerData = [
     },
     {
         id: 4,
-        title: "Mutoh XpertJet 661UF",
+        title: "ALPHA UV SWIFT FLAT BED PRINTER",
         desc: "FLATBED UV PRINT & LED PRINTER",
-        smallDesc: "The Mutoh XpertJet 661UF flatbed UV printer enables direct printing on materials like wood, acrylic, metal, and plastic. Perfect for customized products, it delivers sharp details and long-lasting UV prints.",
-        image: "/images/uv-printer.jpeg"
+        smallDesc: "The Alpha Swift flatbed UV printer uses state-of-the-art technology to createhigh-quality prints with exceptional accuracy. It is designed for efficient on-demand, direct-to-object and direct-to-film printing.",
+        image: "/images/alpha.png"
     }
 ];
 
