@@ -71,7 +71,7 @@ const printerCategories: PrinterCategory[] = [
                 image: "/images/printing-large.png",
                 features: ["Vibrant Color Reproduction", "Durable Material Options", "Large Scale Capabilities"],
                 products: [
-                    "Poster", "Banner", "Indoor and Out Door stickers", "Roll-up",
+                    "Backlit film and Canvas printing", "Poster", "Banner", "Indoor and Out Door stickers", "Roll-up",
                     "Promotional Tables", "Flex", "Indoor and Out door Signs"
                 ]
             },

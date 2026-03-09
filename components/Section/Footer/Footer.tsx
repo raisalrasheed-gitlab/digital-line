@@ -13,7 +13,8 @@ import {
     MapPin,
     ArrowUpRight,
     Send,
-    MessageCircle
+    MessageCircle,
+    MessageSquareText
 } from "lucide-react";
 
 const Footer = () => {
@@ -67,10 +68,17 @@ const Footer = () => {
                                     <span>+971 50 555 2194</span>
                                 </div>
                             </div>
-                            <a href="mailto:digitalline2022@gmail.com" className="flex items-center gap-4 text-white/80 hover:text-[#cfac68] transition-colors cursor-pointer">
+                            <a href="mailto:dlinegraphics@gmail.com" className="flex items-center gap-4 text-white/80 hover:text-[#cfac68] transition-colors cursor-pointer">
                                 <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center shrink-0">
                                     <Mail size={20} />
                                 </div>
+                                <span className="text-sm">dlinegraphics@gmail.com</span>
+
+                            </a>    <a href="mailto:digitalline2022@gmail.com" className="flex items-center gap-4 text-white/80 hover:text-[#cfac68] transition-colors cursor-pointer">
+                                <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center shrink-0">
+                                    <MessageSquareText size={20} />
+                                </div>
+
                                 <span className="text-sm">digitalline2022@gmail.com</span>
                             </a>
                         </div>
