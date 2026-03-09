@@ -32,7 +32,7 @@ const Footer = () => {
                             />
                         </div>
                         <p className="text-white/60 text-lg leading-relaxed max-w-sm">
-                            Digital Line Graphics LLC - Providing excellence in digital printing and creative solutions since 2002.
+                            Digital Line Graphics LLC - Providing excellence in digital printing and creative solutions since 2022.
                         </p>
                         <div className="space-y-4">
                             <div className="flex items-start gap-4 text-white/80 hover:text-[#cfac68] transition-colors cursor-pointer">
@@ -41,7 +41,7 @@ const Footer = () => {
                                 </div>
                                 <span className="text-sm">Maliha Road,
                                     Muweilah Commercial,
-                                    Near National paint factory
+                                    Near National Paint Factory,
                                     Sharjah - U.A.E.</span>
                             </div>
                             <div className="flex items-start gap-4 text-white/80 hover:text-[#cfac68] transition-colors cursor-pointer">

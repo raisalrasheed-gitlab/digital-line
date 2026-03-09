@@ -16,7 +16,7 @@ const About = () => {
 
     const paragraphs = [
         "Digital Line Graphics LLC have with us the most capable individuals, computers, pre-press infrastructure and latest printing machines to execute the jobs entrusted to us.We are sure that you will give us an opportunity to prove to your entire satisfaction the worth of our venture.",
-        "Digital Line Graphics LLC is a sister concern of Al Fajr Graphic, which has been working in this field since 2003 in Sharjah and has made its own mark in the field of digital printing, graphic designing and all kinds of printing jobs.",
+        "Digital Line Graphics LLC is a sister concern of Al Fajr Graphic, which has been working in this field since 2022 in Sharjah and has made its own mark in the field of digital printing, graphic designing and all kinds of printing jobs.",
     ];
 
     // Flatten all paragraphs to calculate total words for global indexing
