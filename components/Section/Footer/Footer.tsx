@@ -39,10 +39,12 @@ const Footer = () => {
                                 <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center shrink-0">
                                     <MapPin size={20} />
                                 </div>
-                                <span className="text-sm">Maliha Road,
-                                    Muweilah Commercial,
-                                    Near National Paint Factory,
-                                    Sharjah - U.A.E.</span>
+                                <span className="text-sm">
+                                    Maliha Road<br />
+                                    Muweilah Commercial<br />
+                                    Near National Paint Factory<br />
+                                    Sharjah, UAE
+                                </span>
                             </div>
                             <div className="flex items-start gap-4 text-white/80 hover:text-[#cfac68] transition-colors cursor-pointer">
                                 <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center shrink-0">
