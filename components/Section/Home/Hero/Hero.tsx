@@ -29,7 +29,7 @@ const printerData = [
     },
     {
         id: 4,
-        title: "ALPHA UV SWIFT FLAT BED PRINTER",
+        title: "Alpha UV Swift Flat Bed Printer",
         desc: "FLATBED UV PRINT & LED PRINTER",
         smallDesc: "The Alpha Swift flatbed UV printer uses state-of-the-art technology to createhigh-quality prints with exceptional accuracy. It is designed for efficient on-demand, direct-to-object and direct-to-film printing.",
         image: "/images/alpha.png"
