@@ -69,7 +69,7 @@ const Hero = () => {
                 </motion.div>
             </AnimatePresence>
 
-            <div className="relative z-20 max-w-2xl">
+            <div className="relative z-20 max-w-3xl">
                 <AnimatePresence mode="wait">
                     <motion.div
                         key={activeIndex}
@@ -78,7 +78,7 @@ const Hero = () => {
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.5 }}
                     >
-                        <h1 className="text-4xl md:text-6xl font-medium text-white leading-[1.1] mb-6 whitespace-pre-line">
+                        <h1 className="text-4xl md:text-5xl font-medium text-white leading-[1.1] mb-6 whitespace-pre-line">
                             {printerData[activeIndex].title}
                         </h1>
 
