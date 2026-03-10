@@ -9,8 +9,8 @@ const printerData = [
     {
         id: 1,
         title: "Ricoh Pro C9200sx",
-        desc: "5 COLOR PRODUCTION PRINTER",
-        smallDesc: "The Ricoh Pro C9200sx is a high-performance 5-color production printer designed for commercial printing. It delivers premium print quality, specialty color options, and reliable high-volume production for professional print businesses.",
+        desc: "4 COLOR PRODUCTION PRINTER",
+        smallDesc: "The Ricoh Pro C9200sx is a high-performance 4-color production printer designed for commercial printing. It delivers premium print quality, specialty color options, and reliable high-volume production for professional print businesses.",
         image: "/images/home-hero-printer-1.png"
     },
     {

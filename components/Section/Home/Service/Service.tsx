@@ -151,13 +151,7 @@ const printerCategories: PrinterCategory[] = [
         image: "/images/category-design.jpg",
         icon: Layers,
         printers: [
-            {
-                id: "661uf",
-                name: "Mutoh XpertJet 661UF",
-                description: "Direct-to-object UV printer for materials like wood, acrylic, metal, and plastic. Perfect for customized products and sharp details.",
-                image: "/images/printer-nature-concept.jpg",
-                features: ["Multi-Material Support", "LED UV Curing", "Precision Printing"]
-            }
+
         ]
     }, {
         id: "die-cutting",
